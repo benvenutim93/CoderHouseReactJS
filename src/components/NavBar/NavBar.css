@@ -22,10 +22,8 @@
     top: 0px;
     margin-bottom: 20px;
     width: 100%;
-    background-image: linear-gradient(to right, #802222, #802222);
     color: white;
-    padding-left: 32px;
-    font-size: 24px;    
+    font-size: 20px;    
   }
   a {
     text-decoration: none;
@@ -34,9 +32,12 @@
   }
   a:hover {
     color: salmon;
-    width: 250px;
   }
-  h1{
+  h2{
     font-family: "Dancing Script", cursive;
+  }
+  header {
+    height: 20%;
+    background-color: #802222;
   }
   
