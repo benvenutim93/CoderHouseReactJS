@@ -1,16 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
-*{
-    padding: 0;
-    margin: 0;
-}
-h1{
-    font-family: "Dancing Script", cursive;
-    color: white;
-}
-img {
-    width: 200px;
-    height: 200px;
-}
-
-
-  
+  @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+  *{
+      padding: 0;
+      margin: 0;
+  }
+  h1{
+      font-family: "Dancing Script", cursive;
+      color: white;
+  }
+  img {
+      width: 200px;
+      height: 200px;
+  }
