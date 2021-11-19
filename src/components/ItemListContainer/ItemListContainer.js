@@ -7,7 +7,7 @@ export default function ItemListContainer(props) {
 
     return (
         <div>
-            <h3>Estamos trabajando para vos...</h3>
+            <h3 className= 'font-black'>Estamos trabajando para vos...</h3>
             <p>
                 Proximamente encontrarás {props.products}
             </p>
