@@ -6,16 +6,26 @@ import './ItemListContainer.css'
 export default function ItemListContainer() {
 
     const[products, setProducts] = useState([]);
-    // console.log(products);
-    useEffect(() => {
-            fetch('https://fakestoreapi.com/products?limit=20')
+    console.log(products);
+
+    const promise = new Promise((resolve) => {
+        setTimeout(() => {
+            fetch('https://fakestoreapi.com/products?limit=2')
             .then(res => res.json())
-            .then(data => {
+            .then(data => resolve(data))
+        }, 2000)
+    })
+    // useEffect(() => {
+    //         fetch('https://fakestoreapi.com/products?limit=20')
+    //         .then(res => res.json())
+    //         .then(data => {
                 
-                setProducts(data)})
+    //             setProducts(data)})
                 
-            .catch(err => console.log(err))
-    }, [])
+    //         .catch(err => console.log(err))
+    // }, [])
+
+    promise.then(data => setProducts(data));
 
     return (
         <div className="itemListContainer">
