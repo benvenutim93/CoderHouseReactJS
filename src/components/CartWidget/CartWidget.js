@@ -5,8 +5,8 @@ import './CartWidget.css';
 
 export default function CartWidget() {
     return (
-        <div clasName="justify-end">
-            <img className='cartImg' src={cart}/> 
+        <div className="justify-end">
+            <img className='cartImg' src={cart} alt="Imagen de Carrito de compras"/> 
         </div>
     )
 }

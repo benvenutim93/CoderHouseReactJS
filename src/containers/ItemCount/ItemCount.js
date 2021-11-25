@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
-import Counter from '../Counter/Counter'
-import CounterDisplay from '../CounterDisplay/CounterDisplay'
+import Counter from '../../components/Counter/Counter'
+import CounterDisplay from '../../components/CounterDisplay/CounterDisplay'
 
 export default function ItemCount() {
 

@@ -9,7 +9,7 @@ function NavBar(){
 
     <header >
       <div className="flex">
-        <img className='classLogo' src={logo}/>
+        <img className='classLogo' src={logo} alt="Logo de Del Mar"/>
         <h1 className='text-5xl text-white mx-2 flex self-center'>Descartables del Mar - Tienda Online</h1>
       </div>
         <nav className="flex flex-row">
