@@ -21,11 +21,12 @@ export default function ItemCount() {
         }
     }
     return (
-        <div>
-            <span className='flex'>Stock Disponible: {stock}</span>
-            <CounterDisplay number={initial}/>
-            
-            <Counter onAdd={onAdd} onSubstract={onSubstract}/>
+        <div className="divClass">
+            <div>
+                <span>Stock Disponible: {stock}</span>
+                <CounterDisplay number={initial}/>
+                <Counter onAdd={onAdd} onSubstract={onSubstract}/>
+            </div>
         </div>
     )
 }
