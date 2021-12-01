@@ -3,13 +3,12 @@ import Item from '../Item/Item';
 import './ItemList.css'
 
 export default function ItemList({products}) {
-    console.log(products);
+    
     return (
         <div className="itemListClass">
             
             {products.map( element => {
-                console.log({element})
-                return <Item product = {element}/>   
+                return <Item key ={element.id} product = {element}/>   
             })}
         </div>
     )

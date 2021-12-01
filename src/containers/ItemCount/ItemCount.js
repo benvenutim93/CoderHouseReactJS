@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Counter from '../../components/Counter/Counter'
 import CounterDisplay from '../../components/CounterDisplay/CounterDisplay'
 
@@ -6,6 +6,10 @@ export default function ItemCount() {
 
     const [initial, setInitial] = useState(1);
     const [stock, setStock] = useState(10);
+
+    useEffect(() => {
+        setStock(stock - initial);
+    }, [])
 
     function onAdd() {
         if(stock > 0){
