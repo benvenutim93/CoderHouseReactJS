@@ -15,7 +15,7 @@ function App() {
           <Switch>
             {/* Aca van las paginas que queremos que varien en la navegacion */}
             <Route exact path="/" component={ItemListContainer} />
-            <Route path='/category/:id' component={ItemListContainer} />
+            <Route path='/category/:categoryId' component={ItemListContainer} />
             <Route path='/item/:id' component={ItemDetailContainer}/>
           </Switch>
         

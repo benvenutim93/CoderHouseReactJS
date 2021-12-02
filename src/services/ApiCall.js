@@ -23,18 +23,25 @@ export const  GetProductById = (id) => {
     })
 })}
 
-
-
-export const GetAllCategories = () => {
-    return new Promise((resolve, reject) => {
+export const GetCategories = () => {
+    return new Promise((resolve,reject)=>{
         fetch(`https://fakestoreapi.com/products/categories`)
-        .then(res => res.json())
-        .then(data => {
-            console.log("desde api call" + data);
-            resolve(data)
-        })
+        .then((response) => response.json())
+        .then( data => resolve(data))
         .catch(err => {
             alert("Error --> " + err.message);
-            reject(err);
+            reject(err.message)
+        })
+})}
+
+export const GetProductsByCategory = (category) =>{
+    console.log(category);
+    return new Promise((resolve,reject)=>{
+        fetch(`https://fakestoreapi.com/products/category/${category}`)
+        .then((response) => response.json())
+        .then( data => resolve(data))
+        .catch(err => {
+            alert("Error --> " + err.message);
+            reject(err.message)
         })
 })}

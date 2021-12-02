@@ -11,6 +11,13 @@ img{
     margin:auto;
 }
 .buttonClass {
+    width: 30%;
     background-color: brown;
     border-color: black;
+    color: white;
+    border-radius: 5px;
+}
+.buttonClass:hover {
+    background-color: white;
+    color: brown;
 }

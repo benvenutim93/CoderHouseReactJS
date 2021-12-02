@@ -7,12 +7,14 @@ import './Item.css';
 export default function Item({product}) {
     return (
         <div className="itemClass">
-            <NavLink to={`/item/${product.id}`}>
-                <img src={product.image} alt={`Imagen de ${product.title}`}  />
-            </NavLink>
+            
+            <img src={product.image} alt={`Imagen de ${product.title}`}  />
             <h2 className="font-bold">{product.title}</h2>
             <h4 className="font-bold">Precio: ${product.price}</h4>
-            <button className= "buttonClass">Ver Detalle</button>
+            <NavLink to={`/item/${product.id}`} >
+                <button className= "buttonClass" >Ver Detalle</button>
+            </NavLink>
+
             <ItemCount />
         </div>
     )

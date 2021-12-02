@@ -12,31 +12,23 @@
     text-align: center;
     display: block;
   }
-  body {
-    background-color: beige;
-  }
   body nav {
     padding: 16px 16px;
     position: sticky;
     top: 0px;
     margin-bottom: 20px;
     width: 100%;
-    color: white;
     font-size: 20px;    
-  }
-  a {
-    text-decoration: none;
-    color: white;
-    margin: 5px;
-  }
-  a:hover {
-    color: salmon;
   }
   h1{
     font-family: "Dancing Script", cursive;
     font-size: 2em;
+    text-decoration: none;
   }
   header {
     background-color: #802222;
+  }
+  .title{
+    text-decoration: none;
   }
   
