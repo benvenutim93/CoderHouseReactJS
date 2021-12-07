@@ -2,34 +2,40 @@ import React, {useState, useEffect} from 'react'
 import Counter from '../../components/Counter/Counter'
 import CounterDisplay from '../../components/CounterDisplay/CounterDisplay'
 
-export default function ItemCount() {
+export default function ItemCount({onAddToCart}) {
 
-    const [initial, setInitial] = useState(1);
+    const [quantity, setQuantity] = useState(1);
     const [stock, setStock] = useState(10);
+    
 
     useEffect(() => {
-        setStock(stock - initial);
+        setStock(stock - quantity);
     }, [])
 
     function onAdd() {
         if(stock > 0){
-            setInitial(initial + 1);
+            setQuantity(quantity + 1);
             setStock(stock - 1);
         }
     }
 
     function onSubstract(){
-        if(initial > 0){
-            setInitial(initial - 1);
+        if(quantity > 0){
+            setQuantity(quantity - 1);
             setStock(stock + 1);
         }
     }
+
+
+    
+
     return (
-        <div className="divClass">
+        <div className="flex divClass">
             <div>
                 <span>Stock Disponible: {stock}</span>
-                <CounterDisplay number={initial}/>
+                <CounterDisplay number={quantity}/>
                 <Counter onAdd={onAdd} onSubstract={onSubstract}/>
+                <button className="btn addCartButton" onClick={() => onAddToCart(quantity)}>Agregar al carrito</button>
             </div>
         </div>
     )

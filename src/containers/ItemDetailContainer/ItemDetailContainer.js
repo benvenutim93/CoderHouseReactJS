@@ -8,7 +8,7 @@ export default function ItemDetailContainer() {
     const {id} = useParams();
     const [item, setItem] = useState();
 
-    console.log(id);
+    
     useEffect(() => {
         const promise = GetProductById(id);
         promise.then(product => setItem(product));

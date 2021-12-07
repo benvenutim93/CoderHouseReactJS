@@ -4,7 +4,7 @@ import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './containers/ItemListContainer/ItemListContainer';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import ItemDetailContainer from './containers/ItemDetailContainer/ItemDetailContainer';
-
+import Cart from "./components/Cart/Cart"
 
 
 function App() {
@@ -17,6 +17,7 @@ function App() {
             <Route exact path="/" component={ItemListContainer} />
             <Route path='/category/:categoryId' component={ItemListContainer} />
             <Route path='/item/:id' component={ItemDetailContainer}/>
+            <Route path='/cart' component={Cart}/>
           </Switch>
         
       </div>

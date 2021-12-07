@@ -1,0 +1,14 @@
+.addCartButton{
+    margin-top: 5px;
+    background-color: brown;
+    color: white;
+    border: 2px solid black;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.addCartButton:hover{
+    margin-top: 5px;
+    background-color: white;
+    color: brown;
+    border: 2px solid black;
+}

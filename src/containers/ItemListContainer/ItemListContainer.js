@@ -5,6 +5,7 @@ import './ItemListContainer.css'
 import { GetProducts, GetProductsByCategory } from '../../services/ApiCall';
 
 
+
 export default function ItemListContainer() {
 
     const { categoryId } = useParams();
@@ -37,6 +38,7 @@ export default function ItemListContainer() {
     return (
         <div className="itemListContainer">
             <ItemList products = {products}/>
+            
         </div>
     )
 }
