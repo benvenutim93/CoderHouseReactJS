@@ -3,6 +3,7 @@ import {useParams} from 'react-router-dom'
 import ItemList from '../../components/ItemList/ItemList';
 import './ItemListContainer.css'
 import { GetProducts, GetProductsByCategory } from '../../services/ApiCall';
+import Loader from '../../components/Loader/Loader'
 
 
 
@@ -36,10 +37,17 @@ export default function ItemListContainer() {
 
 
     return (
-        <div className="itemListContainer">
-            <ItemList products = {products}/>
+        <>
+            {
+                products.length === 0 ? 
+                <Loader/> : 
+                <ItemList products = {products}/>
+            }
+        </>
+        // <div className="itemListContainer">
+        //     <ItemList products = {products}/>
             
-        </div>
+        // </div>
     )
 }
 

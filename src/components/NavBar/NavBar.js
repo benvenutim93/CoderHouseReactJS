@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import './NavBar.css';
 import CartWidget from "../CartWidget/CartWidget";
 
@@ -11,6 +11,7 @@ import { GetCategories } from "../../services/ApiCall";
 
 function NavBar(){
   const [categories, setCategories] = useState();
+  const {cart} = useContext(CartContext);
 
   useEffect(() => {
   
@@ -53,7 +54,7 @@ function NavBar(){
                   </ul>
 
                   
-                  <CartWidget/>
+                  <CartWidget quantity={cart.lenght}/>
               </div>
             </div>
           </nav>

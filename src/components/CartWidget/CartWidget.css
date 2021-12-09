@@ -6,3 +6,7 @@
       width: 30px;
       height: 30px;
   }
+  .cartQuantity{
+      background-color: beige;
+      border-radius: 10px;
+  }

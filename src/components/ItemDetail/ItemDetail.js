@@ -1,15 +1,25 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
+import {CartContext} from '../../Context/CartContext'
 import ItemCount from '../../containers/ItemCount/ItemCount'
-import BtnFinishBuy from '../BtnFinishBuy/BtnFinishBuy';
+import {NavLink} from 'react-router-dom'
+
 
 
 export default function ItemDetail({item}) {
-    const [isAddedToCart, setIsAdded] = useState(false);
 
-    function handleBuy(quantity){
+    const [isAddedToCart, setIsAdded] = useState(false);
+    const {addItemToCart, isInCart} = useContext(CartContext);
+    
+    const [quantity, setQuantity] = useState(1);
+    const [stock, setStock] = useState(10);
+
+    function handleAddToCart(quantity){
         setIsAdded(true);
     }
 
+    function handleBuy(){
+        addItemToCart({item, quantity});
+    }
 
     return (
         <div className="itemClass border-4 border-black">
@@ -19,8 +29,16 @@ export default function ItemDetail({item}) {
             <p>Descripcion: {item?.description}</p>
             <h4 className="font-bold">Precio: $ {item?.price}</h4>
             {isAddedToCart ? 
-                <BtnFinishBuy /> :  
-                <ItemCount onAddToCart={handleBuy}/>
+                <NavLink to={`/Cart`}>
+                <button onClick= {handleBuy} className="btn btn-secondary btnFinishBuy">
+                    Finalizar compra
+                </button>
+                </NavLink> :  
+                <ItemCount onAddToCart={handleAddToCart} 
+                            quantity={quantity} 
+                            setQuantity={setQuantity} 
+                            stock={stock}
+                            setStock={setStock}/>
             }
             
         </div>

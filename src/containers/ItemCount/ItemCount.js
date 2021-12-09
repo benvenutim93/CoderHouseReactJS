@@ -2,11 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Counter from '../../components/Counter/Counter'
 import CounterDisplay from '../../components/CounterDisplay/CounterDisplay'
 
-export default function ItemCount({onAddToCart}) {
-
-    const [quantity, setQuantity] = useState(1);
-    const [stock, setStock] = useState(10);
-    
+export default function ItemCount({onAddToCart, quantity, setQuantity, stock, setStock}) {
 
     useEffect(() => {
         setStock(stock - quantity);
