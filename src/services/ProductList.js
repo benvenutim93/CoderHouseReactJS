@@ -26,7 +26,7 @@ const ProductList = [{
     },
     {
         "id": "2",
-        "name": "Bandejas de Plástico",
+        "title": "Bandejas de Plástico",
         "category": "Descartables",
         "description": "Aptas para comidas frías y calientes",
         "price": 35,
@@ -35,7 +35,7 @@ const ProductList = [{
     },
     {
         "id": "3",
-        "name": "Bandejas de aluminio",
+        "title": "Bandejas de aluminio",
         "category": "Descartables",
         "description": "Bandejas de aluminio",
         "price": 50,
@@ -44,7 +44,7 @@ const ProductList = [{
     },
     {
         "id": "4",
-        "name": "Bolsas de arranque",
+        "title": "Bolsas de arranque",
         "category": "Descartables",
         "description": "Distintas medidas. Precio por kilo",
         "price": 780,
@@ -53,7 +53,7 @@ const ProductList = [{
     },
     {
         "id": "5",
-        "name": "Bolsas camisetas",
+        "title": "Bolsas camisetas",
         "category": "Descartables",
         "description": "Reforzadas, ideales para tu negocio",
         "price": 600,
@@ -62,7 +62,7 @@ const ProductList = [{
     },
     {
         "id": "6",
-        "name": "Bolsas Riñon",
+        "title": "Bolsas Riñon",
         "category": "Descartables",
         "description": "Bolsas con manija tipo riñon. Consulte colores disponibles",
         "price": 350,
@@ -71,7 +71,7 @@ const ProductList = [{
     },
     {
         "id": "7",
-        "name": "Bolsas Kraft",
+        "title": "Bolsas Kraft",
         "category": "Descartables",
         "description": "Bolsas tipo Kraft",
         "price": 375,
@@ -80,7 +80,7 @@ const ProductList = [{
     },
     {
         "id": "8",
-        "name": "Bolsas de Polipropileno",
+        "title": "Bolsas de Polipropileno",
         "category": "Descartables",
         "description": "Bolsas de polipropileno por 200 unidades",
         "price": 630,
@@ -89,7 +89,7 @@ const ProductList = [{
     },
     {
         "id": "9",
-        "name": "Moldes de budín",
+        "title": "Moldes de budín",
         "category": "Descartables",
         "description": "Moldes de papel descartables",
         "price": 15,
@@ -98,7 +98,7 @@ const ProductList = [{
     },
     {
         "id": "10",
-        "name": "Moldes de Pan Dulce",
+        "title": "Moldes de Pan Dulce",
         "category": "Descartables",
         "description": "Moldes para hacer pan dulce. Tamaños: 1/4, 1/2, 3/4 y un kilo",
         "price": 15,
@@ -107,7 +107,7 @@ const ProductList = [{
     },
     {
         "id": "11",
-        "name": "Almendras",
+        "title": "Almendras",
         "category": "Todo Suelto",
         "description": "Almendras Non Parei",
         "price": 650,
@@ -116,7 +116,7 @@ const ProductList = [{
     },
     {
         "id": "12",
-        "name": "Castañas de Cajú",
+        "title": "Castañas de Cajú",
         "category": "Todo Suelto",
         "description": "Castañas de Cajú",
         "price": 650,
@@ -125,7 +125,7 @@ const ProductList = [{
     },
     {
         "id": "13",
-        "name": "Mani con cáscara",
+        "title": "Mani con cáscara",
         "category": "Todo Suelto",
         "description": "Mani con cáscara",
         "price": 120,
@@ -134,7 +134,7 @@ const ProductList = [{
     },
     {
         "id": "14",
-        "name": "Mani Repelado",
+        "title": "Mani Repelado",
         "category": "Todo Suelto",
         "description": "Mani Repelado",
         "price": 200,
@@ -143,7 +143,7 @@ const ProductList = [{
     },
     {
         "id": "15",
-        "name": "Nueces",
+        "title": "Nueces",
         "category": "Todo Suelto",
         "description": "Nueces tipo Mariposa",
         "price": 1600,
@@ -152,7 +152,7 @@ const ProductList = [{
     },
     {
         "id": "16",
-        "name": "Pasas de uva",
+        "title": "Pasas de uva",
         "category": "Todo Suelto",
         "description": "Pasas de uva",
         "price": 300,
