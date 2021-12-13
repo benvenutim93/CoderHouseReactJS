@@ -2,6 +2,7 @@ import React, {useState, useContext} from 'react'
 import {CartContext} from '../../Context/CartContext'
 import ItemCount from '../../containers/ItemCount/ItemCount'
 import {NavLink} from 'react-router-dom'
+import { useHistory } from "react-router-dom";
 
 
 
@@ -10,6 +11,7 @@ export default function ItemDetail({item}) {
     const [isAddedToCart, setIsAdded] = useState(false);
     const {addItemToCart, isInCart} = useContext(CartContext);
     
+    const {push, goBack} = useHistory();
     const [quantity, setQuantity] = useState(1);
     const [stock, setStock] = useState(10);
 

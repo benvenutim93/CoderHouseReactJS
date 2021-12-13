@@ -9,7 +9,8 @@ import Loader from '../../components/Loader/Loader'
 
 export default function ItemListContainer() {
 
-    const { categoryId } = useParams();
+    const { category } = useParams();
+    const [loading, setLoading] = useState(false);
     const[products, setProducts] = useState([]);
     
     // const promise = new Promise((resolve) => {
@@ -22,8 +23,9 @@ export default function ItemListContainer() {
     // promise.then(data => setProducts(data));
 
     useEffect(() => {
-            if(categoryId === undefined){
+        setLoading(true);
 
+            if(category === undefined){
                 const promise =  GetProducts();
                 promise.then(data => setProducts(data));
             }
@@ -31,23 +33,18 @@ export default function ItemListContainer() {
                 const promise =  GetProductsByCategory();
                 promise.then(data => setProducts(data));
             }
-        
-
-    }, [categoryId])
+            setLoading(false);
+    }, [category])
 
 
     return (
         <>
             {
-                products.length === 0 ? 
+                loading ? 
                 <Loader/> : 
                 <ItemList products = {products}/>
             }
         </>
-        // <div className="itemListContainer">
-        //     <ItemList products = {products}/>
-            
-        // </div>
     )
 }
 

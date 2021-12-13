@@ -1,24 +1,17 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useContext } from "react";
 import './NavBar.css';
 import CartWidget from "../CartWidget/CartWidget";
 
 import ButtonLogo from "../ButtonLogo/ButtonLogo";
 import { NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { GetCategories } from "../../services/ApiCall";
+import {CartContext} from '../../Context/CartContext'
 
 
 
 function NavBar(){
-  const [categories, setCategories] = useState();
   const {cart} = useContext(CartContext);
 
-  useEffect(() => {
-  
-    const promise = GetCategories();
-    promise.then(data => setCategories(data));
-  
-  },[]);
 
   return (
       <header>
@@ -38,23 +31,14 @@ function NavBar(){
               </button>
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                    {
-                      
-                      categories !== undefined ? 
-                        categories.map(cat => <li className="nav-item" key={cat} > 
-                        <NavLink className="nav-link text-light" to={`/category/${cat}`}> 
-                        {cat}
-                        </NavLink>
-                        </li>) : null
-                    }
-                    {/* <li className="nav-item"> <NavLink className="nav-link text-light" to={'/category/electronics'} > Electrónica</NavLink></li>
-                    <li className="nav-item"> <NavLink className="nav-link text-light" to={'/category/jewelery'} >    Joyas</NavLink></li>
-                    <li className="nav-item"> <NavLink className="nav-link text-light" to={"/category/men's clothing"}> Ropa Hombres </NavLink></li>
-                    <li className="nav-item"> <NavLink className="nav-link text-light" to={"/category/women's clothing"}  >Ropa Mujeres </NavLink></li> */}
+                    <li className="nav-item"> <NavLink className="nav-link text-light" to={'/category/Todo Suelto'} > Todo Suelto</NavLink></li>
+                    <li className="nav-item"> <NavLink className="nav-link text-light" to={'/category/Descartables'} > Descartables</NavLink></li>
                   </ul>
 
+                  {
+                    cart.lenght === 0 ? null : <CartWidget quantity={cart.lenght}/>
+                  }
                   
-                  <CartWidget quantity={cart.lenght}/>
               </div>
             </div>
           </nav>

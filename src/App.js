@@ -14,10 +14,11 @@ function App() {
       <BrowserRouter>
         <div className="App">
             <NavBar />
+            
             <Switch>
               {/* Aca van las paginas que queremos que varien en la navegacion */}
               <Route exact path="/" component={ItemListContainer} />
-              <Route path='/category/:categoryId' component={ItemListContainer} />
+              <Route path='/category/:category' component={ItemListContainer} />
               <Route path='/item/:id' component={ItemDetailContainer}/>
               <Route path='/cart' component={Cart}/>
               <Route component={<h2>Page not found...</h2>}/>

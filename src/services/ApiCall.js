@@ -1,47 +1,25 @@
 
+import ProductList from './ProductList';
+
 export const  GetProducts = () => {
      return new Promise((response, reject) => {
-        fetch('https://fakestoreapi.com/products?limit=10')
-                .then(res => res.json())
-                .then(data => response(data))
-                    
-                .catch(err => {
-                    alert("Error --> " + err.message);
-                    reject(err);
-                })
+         setTimeout(() => {
+            response(ProductList)
+         },1000)
      })
 }
 
 export const  GetProductById = (id) => {
     return new Promise((resolve, reject) => {
-            fetch(`https://fakestoreapi.com/products/${id}`)
-            .then(res => res.json())
-            .then(data => resolve(data))
-            .catch(err => {
-                alert("Error --> " + err.message);
-                reject(err);
-    })
+            setTimeout(() => {
+                resolve(ProductList.find( product => product.id === id))
+            },2000)
+    
 })}
-
-export const GetCategories = () => {
-    return new Promise((resolve,reject)=>{
-        fetch(`https://fakestoreapi.com/products/categories`)
-        .then((response) => response.json())
-        .then( data => resolve(data))
-        .catch(err => {
-            alert("Error --> " + err.message);
-            reject(err.message)
-        })
-})}
-
 export const GetProductsByCategory = (category) =>{
-    console.log(category);
     return new Promise((resolve,reject)=>{
-        fetch(`https://fakestoreapi.com/products/category/${category}`)
-        .then((response) => response.json())
-        .then( data => resolve(data))
-        .catch(err => {
-            alert("Error --> " + err.message);
-            reject(err.message)
-        })
+            setTimeout(() => {
+                resolve(ProductList.find(product => product.category === category))
+            },1000)
+        
 })}
