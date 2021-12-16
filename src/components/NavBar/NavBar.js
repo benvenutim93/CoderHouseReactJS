@@ -36,9 +36,9 @@ function NavBar(){
                   </ul>
 
                   {
-                    cart.lenght === 0 ? null : <CartWidget quantity={cart.lenght}/>
+                    cart.lenght !== 0 ? <CartWidget quantity={cart.lenght}/> : null
                   }
-                  
+                 
               </div>
             </div>
           </nav>

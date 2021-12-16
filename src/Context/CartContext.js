@@ -7,14 +7,7 @@ export const CartProvider = ({children}) => {
     const [cart, setCart] = useState([]);
 
     function addItemToCart(item, quantity) {
-        if(isInCart(item.id)){
-            let product = cart.find(p => p.id === item.id);
-            product.cantidad += quantity;
-            setCart(...cart, product);
-        }
-        else {
-            setCart([...cart, item]);
-        }
+            setCart([...cart, {quantity: quantity, ...item}]);
     }
 
     function removeItem(id){

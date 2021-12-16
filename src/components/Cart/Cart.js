@@ -6,7 +6,7 @@ import './Cart.css'
 
 export default function Cart() {
 
-    const {cart, totalPrice} = useContext(CartContext);
+    const {cart, totalPrice, clearCart} = useContext(CartContext);
     return (
         <div>
             {
@@ -28,6 +28,7 @@ export default function Cart() {
                 }
 
                 <h3>Total: $ {totalPrice()}</h3>
+                <button className="btn btn-danger" onClick={() => clearCart()}>Vaciar carrito</button>
                 </>
             }
             
