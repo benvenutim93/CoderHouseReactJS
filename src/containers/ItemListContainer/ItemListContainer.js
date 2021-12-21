@@ -6,6 +6,8 @@ import Loader from '../../components/Loader/Loader'
 import { collection,  getDocs, query, where } from 'firebase/firestore/lite';
 import { db } from './../../firebase/config';
 
+//npm install formik --save
+//https://formik.org/docs/overview
 
 
 export default function ItemListContainer() {

@@ -29,6 +29,7 @@ export default function Cart() {
 
                 <h3>Total: $ {totalPrice()}</h3>
                 <button className="btn btn-danger" onClick={() => clearCart()}>Vaciar carrito</button>
+                <NavLink to='/checkout' className="btn btn-success mx-2">Finalizar compra</NavLink>
                 </>
             }
             
