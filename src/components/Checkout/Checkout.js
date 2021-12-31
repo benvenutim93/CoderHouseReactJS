@@ -1,8 +1,9 @@
-import React from 'react'
+import React,{useContext, useState} from 'react'
 import { CartContext } from './../../Context/CartContext';
 import { db } from './../../firebase/config';
-import { collection, addDoc, Timestamp, doc, writeBatch, query, documentId } from 'firebase/firestore/lite';
+import { collection, addDoc, Timestamp, getDocs, writeBatch, query, documentId, where } from 'firebase/firestore/lite';
 import Loader from '../Loader/Loader';
+import { Link } from 'react-router-dom';
 
 
 export default function Checkout() {
@@ -130,7 +131,7 @@ export default function Checkout() {
                         type='tel'
                         placeholder='Telefono'/>
                     </form>
-                    <button onClick={handleSend} className='btn btn-success'>Enviar</button>
+                    <button onClick={handleSubmit} className='btn btn-success'>Enviar</button>
                  </>
             }
 
